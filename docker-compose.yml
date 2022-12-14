@@ -1,0 +1,12 @@
+version: '3'
+services:
+  netcat-server:
+    build:
+      dockerfile: ./Dockerfile
+    image: netcat-server
+    container_name: netcat-server
+    command:
+      - "-p"
+      - "12345"
+    ports:
+      - "12345:12345"

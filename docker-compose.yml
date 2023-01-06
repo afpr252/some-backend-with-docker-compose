@@ -3,6 +3,8 @@ services:
   netcat-server:
     build:
       dockerfile: ./Dockerfile
+      args:
+        - A
     image: netcat-server
     container_name: netcat-server
     command:

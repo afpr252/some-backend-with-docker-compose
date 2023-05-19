@@ -4,3 +4,4 @@ set -e -u -o pipefail
 
 echo 'script.sh has been executed'
 echo "$A"
+sleep 10 # simulating the script takes a while

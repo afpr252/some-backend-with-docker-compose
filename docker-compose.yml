@@ -1,21 +1,13 @@
 version: '3'
 
-networks:
-  netcat:
-    name: netcat-network
-    external: true
-
 services:
   netcat-server:
     build:
       dockerfile: ./Dockerfile
       args:
         - A
-    container_name: netcat-server
     command:
       - "-p"
       - "12345"
     ports:
       - "12345:12345"
-    networks:
-      - netcat
